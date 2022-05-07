@@ -5,7 +5,7 @@
 ## Description
 This application is a budget tracker that has been updated with Progressive Web Application (PWA) technology, to allow for offline access and functionality. Users are able to add deposits and expenses to the budget, with or without an Internet connection. Transactions entered while offline will update the budget total after the user is back online.
 
-This app is written in JavaScript running on Node.js, and is publicly deployed on Heroku with MongoDB Atlas providing NoSQL backend database service. Offline database storage is facilitated via IndexedDB. Packages used include Express for web framework, and Mongoose for Object Document Modeling (ODM) work with the MongoDB backend.
+This app is written in JavaScript running on Node.js, and is publicly deployed on Heroku with MongoDB Atlas providing NoSQL backend database service. The app includes a service worker, web manifest, and offline database storage is facilitated via IndexedDB. Packages used include Express for web framework, and Mongoose for Object Document Modeling (ODM) work with the MongoDB backend.
 
 ![Picture of Budget Tracker](assets/images/screenshot.gif)
 
@@ -44,16 +44,16 @@ If you would like to run the Budget Tracker locally instead of visiting the depl
  2. Visit http://localhost:3001/ to begin using the application
 
 ## Tests
-There is no test suite included with this application
+There is no test suite included with this application.
 
 ## Author
-Application written by Daniel Birmingham ([GitHub profile](https://github.com/Prolix19/))
+Application written by Daniel Birmingham ([GitHub profile](https://github.com/Prolix19/)).
 
 ## License
 [The MIT License](https://opensource.org/licenses/MIT)
 
 ## Contributing
-This project is not open to contributions at this time
+This project is not open to contributions at this time.
 
 ## Questions
-You may reach me via email at 51418825+Prolix19@users.noreply.github.com with any additional questions you may have
+You may reach me via email at 51418825+Prolix19@users.noreply.github.com with any additional questions you may have.
