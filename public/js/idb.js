@@ -10,6 +10,7 @@ request.onupgradeneeded = function(event) {
     db.createObjectStore('newBudget', { autoIncrement: true }); // Create object store called 'newBudget'
 };
 
+// Mass upload transactions to server when online
 request.onsuccess = function(event) {
     db = event.target.result;
     if (navigator.onLine) {
@@ -17,10 +18,12 @@ request.onsuccess = function(event) {
     }
 };
 
+// Error handling
 request.onerror = function(event) {
     console.log(event.target.errorCode);
 };
 
+// saveRecord function is called by index.js to add a transaction to the database
 function saveRecord(entry) {
     const transaction = db.transaction(['newBudget'], 'readwrite');
     const budgetObjectStore = transaction.objectStore('newBudget');
@@ -50,7 +53,7 @@ function uploadTransactions() {
                 const transaction = db.transaction(['newBudget'], 'readwrite');
                 const budgetObjectStore = transaction.objectStore('newBudget');
                 budgetObjectStore.clear();
-                alert("All budget transactions have been submitted successfully!");
+                alert("All deposits and expenses entered while offline have been added successfully");
             })
             .catch(err => {
                 console.log(err);

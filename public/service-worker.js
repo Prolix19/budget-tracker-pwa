@@ -2,6 +2,7 @@ const APP_PREFIX = 'BudgetTracker-';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
+// Cache files in the app for offline use
 const FILES_TO_CACHE = [
     "./index.html",
     "./css/styles.css",
@@ -9,6 +10,7 @@ const FILES_TO_CACHE = [
     "./js/idb.js"
 ];
 
+// Cache all the files in the FILES_TO_CACHE array
 self.addEventListener('install', function (e) {
     e.waitUntil(
         caches.open(CACHE_NAME).then(function (cache) {

@@ -121,8 +121,16 @@ function sendTransaction(isAdding) {
       "Content-Type": "application/json"
     }
   })
-  .then(response => {    
-    return response.json();
+  .then(response => {
+    // Alerts so user will receive a notification that they have added an expense or deposit
+    // This is one of the Acceptance Criteria
+    if(isAdding) {
+      alert("Depsoit added successfully");
+      return response.json();
+    } else {
+      alert("Expense added successfully");
+      return response.json();
+    }
   })
   .then(data => {
     if (data.errors) {
